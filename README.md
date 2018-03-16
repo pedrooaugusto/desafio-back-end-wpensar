@@ -7,6 +7,7 @@
 * Front End:
   * React
   * Material UI
+
 Todas são open source, acredito eu.
 
 # **Requisitos atendidos** #
@@ -31,7 +32,7 @@ Senha: 0000aaaa
 
 Você pode ver a aplicação rodando em: https://wpensar-desafio.herokuapp.com
 
-e DEBUG = true, então vc pode acessar: https://wpensar-desafio.herokuapp.com/api/users ...
+e DEBUG = true, então vc pode acessar: https://wpensar-desafio.herokuapp.com/api/users 
 
 Embora as outras rotas precisem de Token...
 
