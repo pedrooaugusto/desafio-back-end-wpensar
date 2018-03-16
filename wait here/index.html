@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv = "Content-Type" content = "text/html; charset=UTF-8"/>
+	<meta name = "viewport" content = "width=device-width, initial-scale=1, maximum-scale=1.0"/>
+	<title>Blue Market - Produtos</title>
+	<link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
+	<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<link href = "static/styles/style.css" type = "text/css" rel = "stylesheet" media = "screen,projection"/>
+</head>
+<body>
+	<nav class = "light-blue darken-2" role = "navigation">
+		<div class = "nav-wrapper container">
+			
+			<a href = "#" class = "brand-logo">Blue Market</a>
+			
+			<ul class = "right hide-on-med-and-down">
+				<li class = "active"><a href = "#">Produtos</a></li>
+				<li><a href = "#">Compras</a></li>
+				<li><a href = "#">Sair</a></li>
+			</ul>
+			<ul id = "nav-mobile" class = "side-nav">
+				<li class = "active"><a href = "#">Produtos</a></li>
+				<li><a href = "#">Compras</a></li>
+			</ul>
+			<a href = "#" data-activates = "nav-mobile" class = "button-collapse">
+				<i class = "material-icons">menu</i>
+			</a>
+		</div>
+	</nav>
+	<div class = "container">
+		<div class = "row">
+			<div class ="col s12">
+				<h4>Produtos</h4>
+				<span>Criar, alterar, excluir e visualizar produtos.</span>
+			</div>
+		</div>
+		<div class = "row">
+			<div class = "col s12">
+				<a class = "waves-effect waves-light btn blue modal-trigger" title = "Novo Produto" href = "#message-modal">Novo</a>
+			</dir>
+		</div>
+		<div class = "row">
+			<div class ="col s12">
+				<table class = "bordered" style = "margin: 5px">
+			    	<thead>
+			          	<tr>
+			            	<th>Nome</th>
+			            	<th></th>
+			            	<th></th>
+			            	<th></th>
+			        	</tr>
+			        </thead>
+			        <tbody>
+			        	<tr>
+			            	<td colspan = "20">Alvin</td>
+			            	<td class = "right">
+			            		<a class = "btn-floating waves-effect waves-light red" title = "Deletar">
+			            			<i class="material-icons left">delete_forever</i>
+			            		</a>
+			            	</td>
+			            	<td class = "right">
+			            		<a class = "btn-floating waves-effect waves-light orange" title = "Editar">
+			            			<i class="material-icons left">mode_edit</i>
+			            		</a>
+			            	</td>
+			            	<td class = "right">
+			            		<a class = "btn-floating waves-effect waves-light blue" href = "" onclick = "info()" title = "Informações">
+			            			<i class="material-icons left">menu</i>
+			            		</a>
+			            	</td>
+			          	</tr>
+			        	<tr>
+			            	<td colspan = "20">Pedro Augusto</td>
+			            	<td class = "right">
+			            		<a class = "btn-floating waves-effect waves-light red" title = "Deletar">
+			            			<i class="material-icons left">delete_forever</i>
+			            		</a>
+			            	</td>
+			            	<td class = "right">
+			            		<a class = "btn-floating waves-effect waves-light orange" title = "Editar">
+			            			<i class="material-icons left">mode_edit</i>
+			            		</a>
+			            	</td>
+			            	<td class = "right">
+			            		<a class = "btn-floating waves-effect waves-light blue" title = "Informações">
+			            			<i class="material-icons left">menu</i>
+			            		</a>
+			            	</td>
+			          	</tr>
+			        </tbody>
+		      	</table>
+			</div>
+		</div>
+	</div>
+  	
+  	<div id = "produto-form" class = "modal">
+    	<div class = "modal-content">
+    		<div class = "container">
+    			<div class = "row">
+    				<div class = "col s12">
+    					<h5>Novo Produto</h5>
+    					<span>Cadastrar novo produto.</span>	
+    				</div>
+    			</div>
+    			<div class = "row">
+    				<div class = "col s12" style = "padding-left: 0px">
+			    		<form action = "" method = "post">
+			    			<div class = "input-field col s12">
+			          			<input autocomplete = "off" id = "last_name" type = "text" class = "validate">
+			          			<label for = "last_name">Nome</label>
+			    			</div>
+			    		</form>		
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<div class = "modal-footer">
+    		<button href = "" class="modal-action modal-close waves-effect waves btn blue">Salvar</button>
+    		<button href = "" class="modal-action modal-close waves-effect waves-green btn-flat">Cancelar</button>
+    	</div>
+  	</div>
+  	
+  	<div id = "loading-modal" class = "modal">
+    	<div class = "modal-content">
+    		<div class = "container">
+    			<div class = "row">
+    				<div class = "col s12">
+    					<h5>Loading</h5>
+    				</div>
+    			</div>
+    			<div class = "row">
+    				<div class = "col s12" style = "text-align: center;">
+    					<div class="preloader-wrapper big active">
+							<div class="spinner-layer spinner-blue-only">
+      							<div class="circle-clipper left">
+        							<div class="circle"></div>
+      							</div>
+      							<div class="gap-patch">
+        							<div class="circle"></div>
+      							</div>
+      							<div class="circle-clipper right">
+        							<div class="circle"></div>
+      							</div>
+    						</div>
+  						</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+  	</div>
+
+  	<div id = "delete-sure" class = "modal">
+    	<div class = "modal-content">
+    		<div class = "container">
+    			<div class = "row">
+    				<div class = "col s12">
+    					<h5>Deletar Produto</h5>
+    				</div>
+    			</div>
+    			<div class = "row">
+    				<div class = "col s12">
+    					<h6>Tem certeza que deseja deletar este produto permanentemente ?</h6>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<div class = "modal-footer">
+    		<button href = "" class="modal-action modal-close waves-effect waves btn red">Apagar</button>
+    		<button href = "" class="modal-action modal-close waves-effect waves-green btn-flat">Cancelar</button>
+    	</div>
+  	</div>
+
+  	<div id = "message-modal" class = "modal">
+    	<div class = "modal-content">
+    		<div class = "container">
+    			<div class = "row">
+    				<div class = "col s12">
+    					<h5>Error</h5>
+    				</div>
+    			</div>
+    			<div class = "row">
+    				<div class = "col s12">
+    					<h6 id = "msg">Você não permissão para acessar este recurso.</h6>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<div class = "modal-footer">
+    		<button href = "" class="modal-action modal-close waves-effect waves-green btn-flat">Ok</button>
+    	</div>
+  	</div>
+
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script type="text/javascript">
+	(function($){
+  		$(function(){
+    		$('.button-collapse').sideNav();
+  		});
+	})(jQuery);
+	$(document).ready(function(){
+    	$('#produto-form, #delete-sure, #message-modal').modal({});
+    	$('#loading-modal').modal({
+    		dismissible: false
+    	});
+  	});
+	function ok(argument) {
+		fetch("api/produtos/?format=json").
+			then(r => r.json()).
+			then(r => console.log(r))
+	}
+	function info(e){
+		event.preventDefault();
+		fetch("api/users/?format=json")
+			.then(r => {
+				if(!r.ok)
+					throw Error(r.statusText)
+				return r
+			})
+			.then(r => r.json())
+			.then(r => {
+				$("#msg").text(JSON.stringify(r));
+				$("#message-modal").modal('open');				
+			})
+			.catch(e => {
+				$("#msg").text(e.detail);
+				$("#message-modal").modal('open');
+			});
+	}
+</script>
+</html>

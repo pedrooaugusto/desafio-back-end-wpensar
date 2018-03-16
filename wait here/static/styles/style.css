@@ -1,0 +1,18 @@
+.brand-logo{
+	font-size: 1.8rem !important;
+}
+
+.modal-body{
+	margin-top: 10px;
+}
+
+#loading-modal, #message-modal{
+	width: 30%;
+}
+
+#delete-sure{
+	width: 35%;
+}
+.modal{
+	/*width: 35% !important;*/
+}
