@@ -7,8 +7,9 @@
 * Front End:
   * React
   * Material UI
+  * react router
 
-Todas são open source, acredito eu.
+Todos são open source.
 
 # **Requisitos atendidos** #
 1. Cadastro de produtos (Nome) - (:heavy_check_mark:)
@@ -30,11 +31,10 @@ Usuário: admin
 
 Senha: 0000aaaa
 
-Você pode ver a aplicação rodando em: https://wpensar-desafio.herokuapp.com
+Live da aplicação rodando em: https://wpensar-desafio.herokuapp.com
 
-e DEBUG = true, então vc pode acessar: https://wpensar-desafio.herokuapp.com/api/users 
+DEBUG = true, garantindo, assim, acesso a /admin
 
-Embora as outras rotas precisem de Token...
 
 Para rodar a aplicação na sua máquina primeiro crie 
 um ambiente virtual chamado venv no diretório do projeto (ou não):
@@ -52,7 +52,7 @@ Agora instale as dependências do projeto com pip:
 pip install -r requirements.txt
 ````
 
-Por fim, para rodar o projeto:
+Por fim, para iniciar o servidor:
 ````
 python manage.py runserver
 ````
@@ -62,7 +62,9 @@ python manage.py runserver
 ```
 python manage.py test
 ```
-Como o desafio é para backend não achei necessário escrever testes para frontend
+Como o desafio é sobre backend não achei necessário escrever testes para frontend.
+
+Os testes consistem em checar se a api é capaz de realizar as 4 operações de CRUD.
 
 
 # **Porque trabalhar no Grupo WP?** #
